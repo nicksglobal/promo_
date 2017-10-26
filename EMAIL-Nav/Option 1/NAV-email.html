@@ -944,9 +944,77 @@ input {
               padding-left: 20px;
             }
         }
-      @media screen and (max-device-width: 414px) and (max-device-height: 776px) {}
-      @media screen and (max-device-width: 375px) and (max-device-height: 667px) {}
-      @media screen and (max-device-width: 320px) and (max-device-height: 568px) {}
+      @media screen and (max-device-width: 414px) and (max-device-height: 776px) {
+        #expandable_container1 {
+                position:relative;
+                max-width:400px;
+                text-align:center;
+            }
+
+            #details_container1 {
+                position:relative;
+                overflow:hidden;
+            }
+
+            #expandable_container1 td {
+                width: 100%;
+                border-bottom:2px solid #ffffff;
+                height:18px;
+                padding: 10px 0px;
+            }
+
+            #expandable_container1 table {
+                margin-top:-500px;
+                -ms-transition: margin-top .5s ease-in-out;
+                -webkit-transition: margin-top .5s ease-in-out;
+            }
+
+            #exp_checkbox1:checked + table {
+                margin-top:0%;
+            }
+
+            .nav-over,.nav-under {
+                display:block !important;
+                max-height:none !important;
+                padding-top:3px;
+                padding-bottom:3px;
+            }
+
+            .nav-over img,.nav-under img {
+                display:block;
+                float:right;
+                margin-right:5px;
+            }
+
+            .nav-over{
+                -ms-transition-delay: 1.5s;
+                -webkit-transition-delay: 1.5s;
+            }
+
+            #expandable_container1 > .nav-over:hover + div table{
+                margin-top:0% !important;
+            }
+
+            #expandable_container1 > .nav-over:hover{
+                visibility:hidden;
+            }
+            .text_shift{
+                text-align: center !important;
+                padding-right: 101px !important;
+            }
+            .info_item{
+              padding-left: 0px;
+            }
+            .mobile_updates{
+              width: 500px;
+            }
+      }
+      @media screen and (max-device-width: 375px) and (max-device-height: 667px) {
+
+      }
+      @media screen and (max-device-width: 320px) and (max-device-height: 568px) {
+
+      }
       @media screen and (-webkit-min-device-pixel-ratio: 0) {
         /* Insert CSS here */
       }
@@ -1027,7 +1095,7 @@ input {
                                   <!--<![endif]-->
                                   <div id="details_container1">
                                       <!--[if !mso 9]><!--><input id="exp_checkbox1" type="checkbox" style="display:none !important;"><!--<![endif]-->
-                                      <table cellspacing="0" cellpadding="0" border="0" width="300px">
+                                      <table cellspacing="0" cellpadding="0" border="0" width="300px" class="mobile_updates">
                                           <tr>
                                               <td height="25" align="center" valign="center" bgcolor="#DBDBDB" class="text_shift">
                                                   <span class="info_item">2013 Nissan Z</span>
